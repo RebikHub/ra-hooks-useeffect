@@ -8,14 +8,19 @@
   margin: 20px auto;
 }
 
-.list {
-  list-style: none;
+.App {
+  display: flex;
 }
 
-.list > li {
+.list {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.list > li, .description {
   display: flex;
   box-sizing: border-box;
-  border: 1px solid;
+  border: 1px solid #0000002e;
   width: 200px;
   height: 40px;
   align-items: center;
@@ -28,6 +33,14 @@ li:hover {
   cursor: pointer;
 }
 
-.list :last-child {
-  border-bottom: 1px solid;
+.list :last-child, .last {
+  border-bottom: 1px solid #0000002e;
+}
+
+.details > img {
+  width: 200px;
+}
+
+.none {
+  display: none;
 }

@@ -4,7 +4,7 @@ import List from "./components/List";
 
 export default function App() {
 const [list, setList] = useState([])
-const [info, setInfo] = useState()
+const [info, setInfo] = useState({})
 
 useEffect(() => {
   fetch(process.env.REACT_APP_DATA_URL)
@@ -13,14 +13,13 @@ useEffect(() => {
 }, [])
 
 function handleClick(info) {
-  console.log(info);
   setInfo(info);
 }
 
   return (
     <div className="App">
       <List list={list} handleClick={handleClick}/>
-      {/* <Details info={info}/> */}
+      <Details info={info}/>
     </div>
   );
 }
