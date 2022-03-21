@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
 
-function App() {
+export default function App() {
+const [list, setList] = useState([])
+const [id, setId] = useState()
+useEffect(() => {
+  fetch(process.env.REACT_APP_DATA_URL)
+    .then(response => response.json())
+    .then(data => setList(data))
+}, [])
+
+useEffect(() => {
+  console.log(process.env.REACT_APP_ID_URL + `${id}.json`);
+  fetch(process.env.REACT_APP_ID_URL + `${id}.json`)
+    .then(response => response.json())
+    .then(data => setList(data))
+}, [id])
+
+function handleClick(id) {
+  console.log(id);
+  setId(id)
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul className="list">
+        {list.map((el) => <li key={el.id} onClick={() => handleClick(el.id)}>{el.name}</li>)}
+      </ul>
     </div>
   );
 }
-
-export default App;
