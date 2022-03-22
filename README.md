@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/kktrj3jsq0vvgy25/branch/master?svg=true)](https://ci.appveyor.com/project/RebikHub/ra-hooks-useeffect/branch/master)
 
 [Список и детали](https://rebikhub.github.io/ra-hooks-useeffect/)
 
