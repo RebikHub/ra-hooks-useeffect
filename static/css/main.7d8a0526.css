@@ -1,0 +1,2 @@
+*{margin:0;padding:0}#root{margin:20px auto;width:900px}.App{display:flex}.list{list-style:none;margin-right:10px}.description,.list>li{align-items:center;border:1px solid #0000002e;border-bottom:hidden;box-sizing:border-box;display:flex;height:40px;justify-content:center;width:200px}li:hover{background-color:#09f;cursor:pointer}.last,.list :last-child{border-bottom:1px solid #0000002e}.details>img{width:200px}.none{display:none}
+/*# sourceMappingURL=main.7d8a0526.css.map*/
